@@ -20,4 +20,18 @@ def add(numbers: str) -> int:
     
     nums_part = nums_part.replace("\n", delim)
     parts = [p for p in nums_part.split(delim) if p != ""]
+    
+    ints = []
+    negatives = []
+    for p in parts:
+        try:
+            n = int(p)
+        except ValueError:
+            raise ValueError(f"invalid number: {p}")
+        if n < 0:
+            negatives.append(str(n))
+        ints.append(n)
+
+    if negatives:
+        raise ValueError("negative numbers not allowed " + ",".join(negatives))
     return sum(int(p) for p in parts)
