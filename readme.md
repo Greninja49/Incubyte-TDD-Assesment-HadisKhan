@@ -12,4 +12,4 @@ Rules (summary):
 - Allow new lines between numbers ("1\n2,3" -> 6)
 - Support custom delimiter syntax: `//[delimiter]\n[numbers...]` e.g. `//;\n1;2` -> 3
 - Negative numbers: raise exception with message `negative numbers not allowed <n>`; if multiple, list them separated by commas.
-- pytest command for terminal in root folder: "python -m pytest tests -q"
+- pytest command for terminal in root folder: `python -m pytest tests -q`
